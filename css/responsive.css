@@ -1,0 +1,65 @@
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+  .why-layout { grid-template-columns: 1fr; gap: 36px; }
+  .details-layout { grid-template-columns: 1fr; gap: 36px; }
+  .location-layout { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .finder-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  :root { --header-h: 64px; }
+
+  .nav { display: none; }
+  .header-cta .btn { display: none; }
+  .hamburger { display: flex; }
+  .header-cta { gap: 8px; }
+
+  .hero { min-height: 92vh; }
+  .hero-inner { padding: 60px 0 120px; }
+  .hero-title { font-size: clamp(2.2rem, 10vw, 3.4rem); }
+  .hero-facts { grid-template-columns: 1fr 1fr; }
+  .hero-actions { width: 100%; }
+  .hero-actions .btn { width: 100%; }
+
+  .finder-grid { grid-template-columns: 1fr; }
+  .finder-panel, .match-panel { padding: 22px; }
+  .match-grid { grid-template-columns: 1fr; }
+
+  .why-grid { grid-template-columns: 1fr; }
+  .tractor-grid, .match-results { grid-template-columns: 1fr; }
+  .app-grid, .machinery-grid, .trust-grid, .testimonial-grid, .service-grid { grid-template-columns: 1fr; }
+
+  .finance-band, .cta-band { flex-direction: column; align-items: flex-start; padding: 28px; }
+  .finance-actions, .cta-actions { width: 100%; }
+  .finance-actions .btn, .cta-actions .btn { width: 100%; }
+
+  .form-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+
+  .section-head { flex-direction: column; align-items: flex-start; }
+  .head-action { width: 100%; }
+  .head-action .btn { width: 100%; }
+
+  .compare-table { font-size: .8rem; }
+  .compare-table th, .compare-table td { padding: 10px 12px; }
+
+  .spec-cards { grid-template-columns: 1fr 1fr; }
+  .gallery-thumbs img { width: 60px; height: 46px; }
+
+  .wa-float { width: 50px; height: 50px; bottom: 18px; right: 18px; }
+  .back-top { bottom: 18px; left: 18px; width: 40px; height: 40px; }
+
+  .timeline { grid-template-columns: 1fr; }
+}
+
+/* ===== SMALL PHONES ===== */
+@media (max-width: 420px) {
+  .hero-facts { grid-template-columns: 1fr; }
+  .spec-cards { grid-template-columns: 1fr; }
+  .btn-lg { padding: 14px 22px; font-size: .92rem; }
+  .card-actions { flex-direction: column; }
+  .card-actions .btn { width: 100%; }
+}

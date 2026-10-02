@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ | Domaki Motors Tractors Eldoret</title>
+<meta name="description" content="Frequently asked questions about tractors, machinery, financing and support from Domaki Motors in Eldoret, Kenya.">
+<meta name="keywords" content="tractor FAQ Kenya, Domaki Motors questions, agricultural machinery help Eldoret">
+<meta name="theme-color" content="#080a09">
+<link rel="canonical" href="faq.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="FAQ | Domaki Motors Eldoret">
+<meta property="og:description" content="Answers to common questions about our tractors, machinery and services.">
+<meta property="og:image" content="https://imgs.search.brave.com/qSWEXyfQf1FX14Fgc2nVH7CvYaJu95UcDSpFtCFWmeI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTIx/MzcyNTM5MS9waG90/by9hLWdyb3VwLW9m/LWJyYW5kLW5ldy10/cmFjdG9ycy1waG90/b2dyYXBoZWQtZnJv/bS1hYm92ZS1nZXJt/YW55LmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1VYnRzVUJR/WjlwLUVHSWM5b0Rq/SFRCS0doNGRfTkU4/b28zRU5mY2RUQUJF/PQ">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="faq">
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <span class="loader-brand">DOMAKI</span>
+    <span class="loader-brand is-alt">MOTORS</span>
+    <span class="loader-bar"><i></i></span>
+  </div>
+</div>
+
+<header class="site-header" id="site-header"></header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Support</p>
+      <h1>FREQUENTLY ASKED QUESTIONS</h1>
+      <p>Answers to common questions about our tractors, machinery and services.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="faq-list" id="faqList"></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="js/config.js" defer></script>
+<script src="js/tractors.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/animations.js" defer></script>
+<script>
+  const faqs = [
+    ["What types of tractors do you sell?", "We offer utility tractors, farm tractors and agricultural tractors suited to a range of farm operations."],
+    ["Do you sell new and used tractors?", "Our inventory includes both new and used options. Availability varies — contact us for current stock."],
+    ["Can I request a tractor quote?", "Yes. Use the quote form on our contact page or WhatsApp us with the model you are interested in."],
+    ["Do you offer financing?", "Financing availability depends on applicable financing partners and customer eligibility. Contact Domaki Motors for current options."],
+    ["Can I compare tractors?", "Yes. On the tractors page you can select up to three tractors and compare their specifications side by side."],
+    ["Do you sell agricultural implements?", "Yes. We offer ploughs, harrows, trailers, planters, cultivators, slashers and more."],
+    ["Where is Domaki Motors located?", "We are based in Eldoret, Uasin Gishu County, Kenya."],
+    ["Can I contact you through WhatsApp?", "Yes. Use the floating WhatsApp button or click any WhatsApp link on the site."],
+    ["Can I request a specific tractor?", "Yes. If you are looking for a particular model, contact us and we will help source it."],
+    ["Do you offer after-sales support?", "We provide support before and after purchase. Contact us for details on the assistance available."]
+  ];
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const list = document.getElementById("faqList");
+    if (!list) return;
+    list.innerHTML = faqs.map(function (item) {
+      return '<div class="faq-item reveal">' +
+        '<button class="faq-q" aria-expanded="false">' + item[0] + '</button>' +
+        '<div class="faq-a"><p>' + item[1] + '</p></div>' +
+      '</div>';
+    }).join("");
+
+    list.querySelectorAll(".faq-q").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const item = btn.parentElement;
+        const open = item.classList.toggle("open");
+        btn.setAttribute("aria-expanded", open);
+      });
+    });
+
+    if (window.revealObserve) window.revealObserve();
+  });
+</script>
+</body>
+</html>

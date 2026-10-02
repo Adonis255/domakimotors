@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Domaki Motors Tractors | Agricultural Machinery in Eldoret</title>
+<meta name="description" content="Browse tractors available through Domaki Motors in Eldoret, Kenya. Filter by brand, horsepower, drive and price.">
+<meta name="keywords" content="tractor inventory Eldoret, Massey Ferguson Kenya, New Holland tractor, John Deere Kenya, Kubota tractor Kenya">
+<meta name="theme-color" content="#080a09">
+<link rel="canonical" href="tractors.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tractor Inventory | Domaki Motors Eldoret">
+<meta property="og:description" content="Explore tractors available through Domaki Motors in Eldoret, Kenya.">
+<meta property="og:image" content="https://imgs.search.brave.com/qSWEXyfQf1FX14Fgc2nVH7CvYaJu95UcDSpFtCFWmeI/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTIx/MzcyNTM5MS9waG90/by9hLWdyb3VwLW9m/LWJyYW5kLW5ldy10/cmFjdG9ycy1waG90/b2dyYXBoZWQtZnJv/bS1hYm92ZS1nZXJt/YW55LmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1VYnRzVUJR/WjlwLUVHSWM5b0Rq/SFRCS0doNGRfTkU4/b28zRU5mY2RUQUJF/PQ">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="tractors">
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <span class="loader-brand">DOMAKI</span>
+    <span class="loader-brand is-alt">MOTORS</span>
+    <span class="loader-bar"><i></i></span>
+  </div>
+</div>
+
+<header class="site-header" id="site-header"></header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Inventory</p>
+      <h1>TRACTOR INVENTORY</h1>
+      <p>Explore tractors available through Domaki Motors.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="finder-panel glass" style="margin-bottom:40px;">
+        <div class="finder-grid">
+          <label class="field">
+            <span>Search</span>
+            <input type="text" id="inventorySearch" placeholder="Search by model, brand or horsepower...">
+          </label>
+          <label class="field">
+            <span>Horsepower</span>
+            <select data-filter="hp">
+              <option value="">Any power</option>
+              <option value="0-50">Under 50 HP</option>
+              <option value="50-75">50 – 75 HP</option>
+              <option value="75-100">75 – 100 HP</option>
+              <option value="100-999">100+ HP</option>
+            </select>
+          </label>
+          <label class="field">
+            <span>Price</span>
+            <select data-filter="price">
+              <option value="">Any budget</option>
+              <option value="0-2500000">Under KES 2.5M</option>
+              <option value="2500000-3000000">KES 2.5M – 3.0M</option>
+              <option value="3000000-4000000">KES 3.0M – 4.0M</option>
+              <option value="4000000-99999999">KES 4.0M +</option>
+            </select>
+          </label>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:18px;flex-wrap:wrap;">
+          <label class="compare-check"><input type="checkbox" data-filter="brand" value="Massey Ferguson"> Massey Ferguson</label>
+          <label class="compare-check"><input type="checkbox" data-filter="brand" value="New Holland"> New Holland</label>
+          <label class="compare-check"><input type="checkbox" data-filter="brand" value="John Deere"> John Deere</label>
+          <label class="compare-check"><input type="checkbox" data-filter="brand" value="Kubota"> Kubota</label>
+          <label class="compare-check"><input type="checkbox" data-filter="brand" value="Farmtrac"> Farmtrac</label>
+          <label class="compare-check"><input type="checkbox" data-filter="brand" value="Solis"> Solis</label>
+          <label class="compare-check"><input type="checkbox" data-filter="brand" value="Deutz-Fahr"> Deutz-Fahr</label>
+        </div>
+
+        <div style="margin-top:14px;display:flex;gap:18px;flex-wrap:wrap;">
+          <label class="compare-check"><input type="checkbox" data-filter="drive" value="2WD"> 2WD</label>
+          <label class="compare-check"><input type="checkbox" data-filter="drive" value="4WD"> 4WD</label>
+          <label class="compare-check"><input type="checkbox" data-filter="condition" value="New"> New</label>
+          <label class="compare-check"><input type="checkbox" data-filter="condition" value="Used"> Used</label>
+          <label class="compare-check"><input type="checkbox" data-filter="transmission" value="Manual"> Manual</label>
+          <label class="compare-check"><input type="checkbox" data-filter="transmission" value="Synchro"> Synchro</label>
+          <label class="compare-check"><input type="checkbox" data-filter="transmission" value="Power Shuttle"> Power Shuttle</label>
+        </div>
+
+        <div class="finder-foot">
+          <p id="resultCount" class="finder-note">10 tractors found</p>
+          <button class="btn btn-ghost btn-sm" id="resetFilters" type="button">Reset Filters</button>
+        </div>
+      </div>
+
+      <div class="tractor-grid" id="inventoryGrid"></div>
+      <div id="compareWrap"></div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer" id="site-footer"></footer>
+
+<script src="js/config.js" defer></script>
+<script src="js/tractors.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/filters.js" defer></script>
+<script src="js/animations.js" defer></script>
+</body>
+</html>
